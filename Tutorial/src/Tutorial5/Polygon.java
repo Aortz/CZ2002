@@ -41,7 +41,7 @@
 
 package Tutorial5;
 
-public class Polygon {
+public abstract class Polygon { //make Polygon class an abstract class
     public enum KindofPolygon { POLY_PLAIN, POLY_RECT, POLY_TRIANG};
     protected String name;
     protected float width;
@@ -60,10 +60,10 @@ public class Polygon {
         polytype = value;
     }
     public String getName() { return name; }
-    public float calArea() { return 0; }
+    public abstract float calArea(); //make calArea method an abstract method which will "enforce' derived class to have its own calArea
     public void printWidthHeight( ) {
         System.out.println("Width = " + width + " Height = " + height);
     }
-}
 
+}
 
